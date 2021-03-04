@@ -109,7 +109,7 @@ function draw() {
      }
     if (keyWentDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      jump.play();
-       touches = [];
+      
      }
       score = Math.floor(frameCount/5) ;
      if (keyDown("down")){
