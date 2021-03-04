@@ -104,10 +104,12 @@ function draw() {
   
   if (play===0){
        if (keyDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
-     keldeo.velocityY = -17
+     keldeo.velocityY = -17;
+          touches = [];
      }
     if (keyWentDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      jump.play();
+       touches = [];
      }
       score = Math.floor(frameCount/5) ;
      if (keyDown("down")){
@@ -126,11 +128,11 @@ function draw() {
     l.visible = true;
     keldeo.collide(invisibleGround)
      drawSprites();
-    if (mousePressedOver(l)){
+    if (mousePressedOver(l) || touches.length>0){
         play=0;
       score=0;
       l.visible = false;
-     
+      touches = []; 
       score=0;
       frameCount = 0;
         }
