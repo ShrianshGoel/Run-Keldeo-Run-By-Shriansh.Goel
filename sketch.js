@@ -16,8 +16,8 @@ function preload(){
   stone1 = loadImage("clipart961968.png");
   l1 = loadImage("—Pngtree—game over pixel and skull_5309256.png");
   load = loadImage("kissclipart-pokemon-loudred-clipart-loudred-whismur-exploud-d5311e249005df15.png ");
-  kel1 = loadImage("d8mhi0s-d5d0d259-0ac2-457c-b326-39f704185090.gif")
-   kel2 = loadImage("da5ovs6-5a92efcf-2afb-420d-9dd9-dc2cdb2fd5a6.gif");
+  kel1 = loadAnimation("d8mhi0s-d5d0d259-0ac2-457c-b326-39f704185090.gif")
+   kel2 = loadAnimation("217-2175617_647-keldeo-by-inflationdex-d8flh2i-cartoon.png");
 }
 
 function obs(){
@@ -77,8 +77,8 @@ function setup() {
   l.visible = false;
   
   keldeo = createSprite(55,height-20,20,20);
-  keldeo.addImage("k",kel1);
- keldeo.addImage("kg",kel2);
+  keldeo.addAnimation("k",kel1);
+ keldeo.addAnimation("kg",kel2);
   keldeo.scale = 0.12;
   keldeo.setCollider("circle",0,0,400)
   
@@ -99,7 +99,8 @@ function draw() {
       play=1;
       h=0;
       keldeo.velocityY = 0;
-      
+      keldeo.changeAnimation("kg",kel2);
+      keldeo.scale = 0.56;
       }
   
     
@@ -130,6 +131,8 @@ function draw() {
      drawSprites();
     if (mousePressedOver(l) || touches.length>0){
         play=0;
+       keldeo.changeAnimation("k",kel1);
+      keldeo.scale = 0.12;
       score=0;
       l.visible = false;
       touches = []; 
