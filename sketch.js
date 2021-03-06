@@ -98,6 +98,8 @@ function draw() {
     if (stone.isTouching(keldeo)){
       play=1;
       h=0;
+      keldeo.velocityY = 0;
+      
       }
   
     
@@ -105,12 +107,10 @@ function draw() {
   if (play===0){
        if (keyDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      keldeo.velocityY = -17;
+         jump.play();
           touches = [];
      }
-    if (keyWentDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
-     jump.play();
-      
-     }
+  
       score = Math.floor(frameCount/5) ;
      if (keyDown("down")){
      keldeo.velocityY = 17
