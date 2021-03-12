@@ -100,6 +100,7 @@ function draw() {
       h=0;
       keldeo.velocityY = 0;
       keldeo.changeAnimation("kg",kel2);
+      keldeo.x = width/1.34;
       keldeo.scale = 0.56;
       }
   
