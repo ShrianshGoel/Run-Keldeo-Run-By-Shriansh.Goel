@@ -134,6 +134,7 @@ function draw() {
         play=0;
        keldeo.changeAnimation("k",kel1);
       keldeo.scale = 0.12;
+      keldeo.x = 55;
       score=0;
       l.visible = false;
       touches = []; 
