@@ -113,6 +113,11 @@ function draw() {
           touches = [];
      }
   
+    if(keldeo.y<=height-100){
+       jump.pause();
+       
+       }
+    
       score = Math.floor(frameCount/5) ;
      if (keyDown("down")){
      keldeo.velocityY = 17
