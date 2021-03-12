@@ -109,11 +109,11 @@ function draw() {
   if (play===0){
        if (keyDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      keldeo.velocityY = -17;
-         jump.loop();
+         jump.play();
           touches = [];
      }
   
-    if(keldeo.y<=height-140){
+    if(keldeo.y<=height-150){
        jump.pause();
        
        }
