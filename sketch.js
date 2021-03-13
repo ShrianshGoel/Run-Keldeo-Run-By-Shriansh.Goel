@@ -99,7 +99,7 @@ function draw() {
       play=1;
       h=0;
       keldeo.velocityY = 0;
-      keldeo.changeAnimation("kg",kel2);
+      keldeo.visible = false;
       keldeo.x = width/1.34;
       keldeo.scale = 0.56;
       }
@@ -107,7 +107,7 @@ function draw() {
     
   
   if (play===0){
-       if (keyWentDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
+       if (keyDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      keldeo.velocityY = -17;
          jump.play();
           touches = [];
@@ -137,6 +137,7 @@ function draw() {
        keldeo.changeAnimation("k",kel1);
       keldeo.scale = 0.12;
       keldeo.x = 55;
+          keldeo.visible = true;
       score=0;
       l.visible = false;
       touches = []; 
