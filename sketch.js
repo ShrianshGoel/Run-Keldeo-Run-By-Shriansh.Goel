@@ -113,8 +113,11 @@ function draw() {
         
           touches = [];
      }
-  if (keldeo.velocityY>0){
+  if (keldeo.velocityY>2){
       jump.play();
+      }
+     if (keldeo.velocityY=0){
+      jump.pause();
       }
  
     
