@@ -113,12 +113,13 @@ function draw() {
         
           touches = [];
      }
-  if (keldeo.velocityY>2){
-      jump.play();
-      }
-     if (keldeo.velocityY===0){
-      jump.pause();
-      }
+ if(keldeo.height>=height-120){
+  jump.play(); 
+   
+ }
+    if (keldeo.height<=height-100){
+    jump.pause();
+    }
  
     
       score = Math.floor(frameCount/5) ;
