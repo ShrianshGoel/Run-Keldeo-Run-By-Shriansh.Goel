@@ -107,16 +107,13 @@ function draw() {
     
   
   if (play===0){
-       if (keyDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
+       if (keyWentDown("space") && keldeo.y>=height-90 || touches.length>0 && keldeo.y>=height-90){
      keldeo.velocityY = -17;
          jump.play();
           touches = [];
      }
   
-    if(keldeo.y<=height-150){
-       jump.pause();
-       
-       }
+ 
     
       score = Math.floor(frameCount/5) ;
      if (keyDown("down")){
