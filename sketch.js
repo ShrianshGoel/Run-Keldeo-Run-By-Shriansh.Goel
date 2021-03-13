@@ -98,6 +98,7 @@ function draw() {
     if (stone.isTouching(keldeo)){
       play=1;
       h=0;
+      stone.destroyEach();
       keldeo.velocityY = 0;
       keldeo.visible = false;
       keldeo.x = width/1.34;
